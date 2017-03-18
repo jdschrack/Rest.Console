@@ -18,7 +18,7 @@ namespace Rest
             client.BaseAddress = new Uri("https://office.sabinoroad.org/api/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-            client.DefaultRequestHeaders.Add("Authorization-Token", "d53L8ThfaymkGZt8MH8tvXTQ");
+            client.DefaultRequestHeaders.Add("Authorization-Token", "");
 
             if (Login(client))
                 GetCurrentPerson();
@@ -35,7 +35,7 @@ namespace Rest
             client = new HttpClient(handler);
             handler.CookieContainer = cookies;
 
-            var baseAddress = new Uri("http://office.sabinoroad.org/api/");
+            var baseAddress = new Uri("httpskis://office.sabinoroad.org/api/");
             client.BaseAddress = baseAddress;
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
